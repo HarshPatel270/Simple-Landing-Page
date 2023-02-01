@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/*google fonts*/
+
+::selection {
+  background-color: #353F48;
+   color: tomato;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #353F48;
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+h1, h2 {line-height: 1.2;}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: tomato;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*ends base*/
+
+.container {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  outline: none;
+  border: 2px solid tomato;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;  
+  background-color: transparent;
+  font-weight: 600;
+  color: tomato;
+  transition-duration: .3s;
+  transition-property: border, background, color;
+}
+
+.btn:hover {
+  border: 2px solid #353F48;
+  color: #353F48;
+}
+
+.btn-full {
+  border: 2px solid tomato;
+  background-color: tomato;
+  color: #ededed;
+}
+
+.btn-full:hover {
+  border: 2px solid tomato;
+  background-color: transparent;
+  color: tomato;
+}
+
+/*ends basic*/
+
+header {
+  width: 100%;
+  height: auto;
+  padding: 50px 0 30px 0;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+
+header .container {
+  width: 1600px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: tomato;
+  cursor: pointer;
+}
+
+header .logo h2 span {
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  background-color: #353F48;
+  margin-right: 3px;
+  transition: .3s;
+}
+
+header .logo h2:hover span {
+  background-color: tomato;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header nav ul {list-style: none;}
+
+header nav ul li {display: inline-block;}
+
+header nav ul li a {
+  font-size: .9em;
+  font-weight: 600;
+  margin: 0 15px;
+  padding: 0 5px 3px; 
+  border-bottom: 2px solid transparent;
+  transition-duration: .3s;
+  transition-property: color, border-bottom;
+}
+
+header nav ul li a:hover {
+  border-bottom: 2px solid #353F48;
+  color: #353F48;
+}
+
+header nav .cta {margin-left: 30px;}
+
+header nav .cta button:last-child {margin-left: 20px;}
+
+/*ends header*/
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: #ebebeb;
+
+  position: relative;
+  z-index: 1;
+}
+
+.hero .mid {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 20vh;  
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 1;
+}
+
+.hero .mid .desc {width: 50%;}
+
+.hero .mid .desc h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero .mid .desc h1 span {
+  font-size: 1.5em;
+  -webkit-text-stroke: 1px tomato;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero .mid .desc p {
+  width: 550px;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.hero .mid .placeholder {width: 50%;}
+
+/*ends mid*/
+
+.hero .over {
+  width: 40px;
+  height: auto;
+
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 4;
+}
+
+.hero .over a {
+  display: block;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.hero .over a i {
+  font-size: 1.5em;
+  color: #353F48;
+  transition: .3s color;
+}
+
+.hero .over a:hover i {
+  color: tomato;
+}
+
+/*ends over*/
+
+.hero .bottom {
+  position: absolute;
+  bottom: 50px;
+  right: 8%;
+}
+
+.hero .bottom .connect a {
+  font-size: .9em;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.hero .bottom .connect a:hover {
+  text-decoration: underline;
+}
+
+/*ends bottom*/
+
+.hamb {
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+  display: none;
+
+  position: absolute;
+  top: 59px;
+  right: 25px;
+  z-index: 6;
+}
+
+.hamb span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: tomato;
+}
+
+.hamb span.mid {
+  margin: 7px 0px;
+}
+
+/* ------------------Media Query------------------- */
+
+@media screen and (max-width: 1375px) {
+    .hero .mid .desc {
+      padding-left: 50px;
+    }
+  
+    .hero .bottom {
+      right: 2.5%;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .hero .mid .desc h1 {
+      font-size: 2.2em;
+    }
+  
+    .hero .mid .desc h1 span {
+      font-size: 1.3em;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .hero .mid {
+      padding-top: 30vh;
+    }
+  
+    .hero .mid .desc {
+      padding-left: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero .mid {
+      padding-top: 35vh;
+    }
+  
+    .hero .mid .desc {
+      width: 100%;
+      padding-left: 80px;
+    }
+  
+    .hero .mid .placeholder {display: none;}
+  
+    .hamb {
+      display: block;
+    }
+  
+    header nav {
+      width: 100%;
+      height: 100vh;
+      background: #353F48;
+  
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      right: 0;
+  
+      justify-content: center;
+      transition: .3s left;
+    }
+  
+    header nav.click {
+      left: 0;
+    }
+  
+    header nav ul {
+      width: 100%;
+      text-align: center;
+    }
+  
+    header nav ul li {display: block;}
+  
+    header nav ul li a {
+      font-size: 3em;
+      margin: 0 0 25px 0;
+      padding: 0; 
+      border-bottom: none;
+    }
+  
+    header nav ul li a:hover {
+      border-bottom: none;
+      color: #ededed;
+    }
+  
+    header nav .cta {
+      width: 100%;
+      margin-left: 0px;
+      text-align: center;
+    }
+  
+    header nav .cta button {margin: 10px 20px;}
+  
+    .btn {
+      border: 3px solid tomato;
+      padding: 10px 25px;
+      cursor: pointer;
+      font-size: 1.1em;
+      letter-spacing: 1.1px;
+      color: tomato;
+    }
+  
+    .btn:hover {
+      border: 3px solid #ededed;
+      color: #ededed;
+    }
+  
+    .btn-full {
+      border: 3px solid tomato;
+      background-color: tomato;
+      color: #ededed;
+    }
+  
+    .btn-full:hover {
+      border: 3px solid tomato;
+      background-color: transparent;
+      color: tomato;
+    }
+  }
